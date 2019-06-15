@@ -1,19 +1,20 @@
+/*To print Yes if sum of any of the subsequence is equal to the desired value else No
+Imp: subsequences are not always contigous. SubArrays are always contigous.*/
 #include<iostream>
+#define ll long long int
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    long long int t;
-    int n,m,arr[1000];
+    ll t,n,m,arr[1000];
     cin>>t;
-    while(t>0){
+    while(t--){
         int o=0;
         cin>>n>>m;
-        for(int j=0;j<n;j++){
+        for(ll j=0;j<n;j++){
             cin>>arr[j];
         }
-        for(int j=1;j<=((1<<n)-1);j++){
-            int k=0,l=j;
-            int sum=0;
+        for(ll j=1;j<=((1<<n)-1);j++){
+            ll k=0,l=j,sum=0;
             while(l>0){
                 if((l&1)==1){
                     sum+=arr[k];    
@@ -31,6 +32,5 @@ int main(){
         else{
             cout<<"No";
         }
-    t--;
     }
 }
