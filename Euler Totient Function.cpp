@@ -15,17 +15,18 @@ T lines, one for the result of each test case.*/
 #include <iostream>
 using namespace std;
 #define ll long long
-const int N=1000002;
+const ll N=1000002;
 ll arr[N];
 int main() {
-	for (ll i=1;i<N;i++){
+	for (ll i=0;i<=N;i++){
 	    arr[i]=i;
 	}
 	for(ll i=2;i<N;i++){
 	    if(arr[i]==i){
-	        arr[i]=-1;
-	        for(ll j=i;j<N;j+=i){
-	            arr[j]=(arr[j]*(i-1))/i;
+	        arr[i]-=1;
+	        for(ll j=2*i;j<N;j+=i){
+	            arr[j]*=(i-1);
+                arr[j]/=i;
 	        }
 	    }
 	}
@@ -34,7 +35,7 @@ int main() {
 	cin>>t;
 	while(t--){
 	    cin>>n;
-	    cout<<arr[n];
+	    cout<<arr[n]<<endl;
 	}
 	return 0;
 }
