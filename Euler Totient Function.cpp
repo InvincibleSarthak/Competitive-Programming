@@ -26,7 +26,7 @@ int main() {
 	        arr[i]-=1;
 	        for(ll j=2*i;j<N;j+=i){
 	            arr[j]*=(i-1);
-                arr[j]/=i;
+                    arr[j]/=i;
 	        }
 	    }
 	}
