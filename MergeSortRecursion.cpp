@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
+#define ll long long int
 using namespace std;
-void merge(int* arr,int s, int e){
-    int mid=((s+e)/2);
+void merge(int arr[],int s, int e){
+    int mid=(s+e)>>1;
     int i=s;
     int j=mid+1;
     int k=s;
-    int temp[100];
+    int temp[1000000];
     while(i<=mid && j<=e){
         if(arr[i]<arr[j]){
             temp[k++]=arr[i++];
@@ -24,24 +25,22 @@ void merge(int* arr,int s, int e){
         arr[x]=temp[x];
     }
 }
-void mergeSort(int* arr,int s, int e){
-    //base case
+void mergeSort(int arr[],int s, int e){
     if(s>=e){
         return;
     }
-    //recursive case
-    int mid=((s+e)/2);//division of array
-    mergeSort(arr,0,mid);
+    int mid=(s+e)>>1;
+    mergeSort(arr,s,mid);
     mergeSort(arr,mid+1,e);
     merge(arr,s,e);
 }
 int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+    ll n=0;
+    int arr[1000000];
+    while(cin>>arr[n]){
+        n++;
     }
+    
     mergeSort(arr,0,n-1);
     for(int i=0;i<n;i++){
         cout<<arr[i]<<' ';
