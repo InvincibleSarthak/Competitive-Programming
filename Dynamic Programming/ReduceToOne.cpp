@@ -1,5 +1,5 @@
 //To reduce the number to one in the minimum number of operations.
-
+//Bottom-Up Approach
 
 
 #include<iostream>
