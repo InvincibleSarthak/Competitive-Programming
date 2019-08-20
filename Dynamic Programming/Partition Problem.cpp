@@ -22,8 +22,8 @@ bool solve(int *arr, int n){
         for(int i=1;i<=n;i++){
             for(int j=1;j<=(sum/2);j++){
                 dp[i][j] = dp[i-1][j];
-                if(arr[i] <= j){
-                    dp[i][j] = dp[i][j] || dp[i-1][j-arr[i]];
+                if(arr[i-1] <= j){
+                    dp[i][j] = dp[i][j] || dp[i-1][j-arr[i-1]];
                 }
             }
         }
