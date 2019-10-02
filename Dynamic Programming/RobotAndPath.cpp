@@ -6,9 +6,11 @@
 using namespace std;
 int dp[1000][1000];
 int solve(int m, int n){
+//     Base case if starting position is blocked
     if(dp[0][0] == -1){
         return 0;
     }
+//     If end position is blocked
     if(dp[m-1][n-1] == -1){
         return 0;
     }
