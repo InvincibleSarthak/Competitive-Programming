@@ -13,6 +13,7 @@ int solve(int i, int j){
     if(dp[i][j] != -1){
         return dp[i][j];
     }
+//     As the next player will try to minimize our winning chances, we'll take min for next chances.
     int q1 = arr[i]+min(solve(i+2,j) , solve(i+1,j-1));
     int q2 = arr[j]+min(solve(i,j-2) , solve(i+1,j-1));
     dp[i][j] = max(q1,q2);
