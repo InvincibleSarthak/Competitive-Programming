@@ -9,6 +9,11 @@ int main() {
     string s2="Hello World";
     cout<<s2<<endl;
     string s3;
+//     Stops taking input when encounters '\n'
     getline(cin,s3);
     cout<<s3<<endl;
+    string s4;
+//     Stops taking input when encounters a space
+    cin>>s4;
+    cout<<s4;
 }
