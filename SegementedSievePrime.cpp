@@ -2,8 +2,9 @@
 
 
 
-#include<iostream>
-#include<math.h>
+// #include<iostream>
+// #include<math.h>
+#include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
 const ll N=100000002;
