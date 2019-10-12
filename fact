@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  long int x,fact=1,i;
+  cin>>x;
+  if(x==0)
+    cout<<fact;
+  else
+  {
+    for(i=1;i<=x;++i)
+    {
+      fact*=i;
+    }
+    cout<<fact;
+  }
+  return 0;
+}
