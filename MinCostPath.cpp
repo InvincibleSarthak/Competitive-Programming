@@ -1,5 +1,6 @@
 //To find the minimum cost to travel from 1,1 to x,y.
 //The 3*3 matrix entered contains the cost values for different paths.
+//Only three moves allowed. diagonally right downwards, right and down.
 
 #include <iostream>
 #include <bits/stdc++.h>
