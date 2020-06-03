@@ -21,7 +21,7 @@ int main(){
         }
     }
     ll unnum=0;
-    for(ll i=0;i<a;i++){
+    for(ll i=0;i<64;i++){
         res[i]%=3;
         unnum+=(res[i]<<i);
     }
